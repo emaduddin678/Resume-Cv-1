@@ -78,3 +78,248 @@ img{
     max-width: 100%;
     height: auto;
 }
+
+/* ============== Class Css =============== */
+.section{
+    padding: 1.5rem 0;
+}
+
+.section-title{
+    font-size: var(--h2-font-size);
+    color: var(--title-color);
+    font-weight: var(--font-semi-bold);
+    text-transform: uppercase;
+    letter-spacing: .35rem;
+    text-align: center;
+    margin-bottom: var(--mb-3);
+}
+
+/* ============== LAYOUT =============  */
+.bd-container{
+    max-width: 968px;
+    width: calc(100% - 3rem);
+    margin-left: var(--mb-3);
+    margin-right: var(--mb-3);
+}
+
+.bd-grid{
+    display: grid;
+    gap: 1.5rem;
+}
+
+.l-header{
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    z-index: var(--z-fixed);
+    background-color: var(--body-color);
+    box-shadow: 0 -1px 4px rgba(0, 0, 0, .1);
+    transition: .3s;
+}
+
+/* ============= NAV ===========  */
+.nav{
+    height: var(--header-height);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+@media screen and (max-width: 968px) {
+    .nav_menu{
+        position: fixed;
+        bottom: -100%;
+        left: 0;
+        width: 100%;
+        padding: 2rem 1.5rem;
+        background-color: var(--body-color);
+        box-shadow: 0 1px 4px rgba(0, 0, 0, .1);
+        z-index: var(--z-fixed);
+        transition: .4s;
+    }
+}
+
+.nav_logo,
+.nav_toggle{
+    color: var(--title-color);
+    font-weight: var(--font-medium);
+}
+
+.nav_toggle{
+    font-size: 1.2rem;
+    cursor: pointer;
+}
+
+.nav_item{
+    text-align: center;
+}
+
+.nav_list{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+}
+
+.nav_link{
+    display: flex;
+    flex-direction: column;
+    font-size: var(--smaller-font-size);
+    color: var(--text-color-light);
+    font-weight: var(--font-medium);
+}
+
+.nav_link:hover{
+    color: var(--title-color);
+}
+
+.nav_icon{
+    font-size: 1.2rem;
+    margin-bottom: var(--mb-1);
+}
+
+/* ========== Show menu ========  */
+.show-menu{
+    bottom: var(--header-height);
+}
+
+/* Active -link  */
+.active-link{
+    color: var(--title-color);
+}
+
+/* ============= HOME ==========  */
+.home{
+    position: relative;
+}
+
+.home_container{
+    gap: 3rem;
+}
+
+.home_data{
+    gap: .5rem;
+    text-align: center;
+}
+
+.home_img{
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    justify-self: center;
+    margin-bottom: var(--mb-1);
+}
+
+.home_title{
+    font-size: var(--h1-font-size);
+}
+
+.home_profession{
+    font-size: var(--normal-font-size);
+    margin-bottom: var(--mb-1);
+}
+
+.home_address{
+    gap: 1rem;
+}
+
+.home_information{
+    display: flex;
+    align-items: center;
+    font-size: var(--small-font-size);
+}
+
+.home_icon{
+    font-size: 1.2rem;
+    margin-right: .25rem;
+}
+
+.home_button-movil{
+    display: inline-block;
+    border: 2px solid var(--text-color);
+    color: var(--title-color);
+    padding: 1rem 2rem;
+    border-radius: .25rem;
+    transition: .3s;
+    font-weight: var(--font-medium);
+    margin-top: var(--mb-3);
+}
+
+.home_button-movil:hover{
+     background-color: var(--text-color);
+     color: var(--container-color);
+}
+
+/* ============= SOCIAL ========== */
+.social_container{
+    grid-template-columns: max-content;
+    gap: 1rem;
+}
+
+.social_link{
+    display: inline-flex;
+    align-items: center;
+    font-size: var(--small-font-size);
+    color: var(--text-color);
+}
+
+.social_link:hover{
+    color: var(--title-color);
+}
+
+.social_icon{
+    font-size: 1.2rem;
+    margin-right: .25rem;
+}
+
+/* ============== PROFILE ============= */
+
+.profile_description{
+    text-align: center;
+}
+
+/*=============== Education and experience ============= */
+.education_content{
+    display: flex;
+}
+
+.education_time{
+    padding-right: 1rem;
+}
+
+.education_rounder{
+    position: relative;
+    display: block;
+    width: 16px;
+    height: 16px;
+    background-color: var(--text-color-light);
+    border-radius: 50%;
+    margin-top: .25rem;
+}
+
+.education_line{
+    display: block;
+    width: 2px;
+    height: 110%;
+    background-color: var(--text-color-light);
+    transform: translate(7px, 0);
+}
+
+.education_data{
+    gap: .5rem;
+}
+
+.education_title{
+    font-size: var(--h3-font-size);
+}
+
+.education_studies{
+    font-size: var(--small-font-size);
+    color: var(--title-color);
+}
+
+.education_year{
+    font-size: var(--smaller-font-size);
+}
+
+/* ============ SKILLS and Languages =============  */
