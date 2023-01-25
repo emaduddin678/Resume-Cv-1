@@ -45,6 +45,17 @@ html{
     scroll-behavior: smooth;
 }
 
+/* =========== Variables Dark theme =========== */
+.change-theme{
+    position: absolute;
+    right: 0;
+    top: 2.2rem;
+    display: flex;
+    color: var(--text-color);
+    font-size: 1.2rem;
+    cursor: pointer;
+}
+
 /* =============== Classes modified to reduce size and print on A4 sheet ===========  */
 
 body{
@@ -335,17 +346,163 @@ img{
     gap: 0;
 }
 
-.skills_name{
+.skills_name,
+.languages_name{
     display: flex;
     align-items: center;
     margin-bottom: var(--mb-3);
 }
 
-.skills_circle{
+.skills_circle,
+.languages_circle{
     display: inline-block;
     width: 5px;
     height: 5px;
     background-color: var(--text-color);
     border-radius: 50%;
     margin-right: .75rem;
+}
+
+/* ============= CERTIFICATES ============  */
+.certificate_container{
+    gap: 0.1rem;
+    margin-bottom: var(--mb-3);
+}
+
+.certificate_title{
+    font-size: var(--h3-font-size);
+}
+
+/* ============ REFERENCES ==========  */
+.references_container{
+    gap: 3rem;
+}
+
+.references_content{
+    gap: .25rem;
+}
+
+.references_subtitle{
+    color: var(--text-color-light);
+}
+
+.references_subtitle,
+.references_contact{
+    font-size: var(--smaller-font-size);
+}
+
+.references_title{
+    font-size: var(--h3-font-size);
+}
+
+/* ============== Interests ===========  */
+.interests_container{
+    grid-template-columns: repeat(3, 1fr);
+    margin-top: var(--mb-2);
+}
+
+.interests_content{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.interests_icon{
+    font-size: 1.5rem;
+    color: var(--text-color-light) ;
+    margin-bottom: .25rem;
+}
+
+/* Scroll Top  */
+.scrolltop{
+    position: fixed;
+    right: 1rem;
+    bottom: -20%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: .3rem;
+    background-color: var(--container-color-alt);
+    z-index: var(--z-tooltip);
+    transition: .4s;
+    visibility: hidden;
+}
+
+.scrolltop_icon{
+    font-size: 1.2rem;
+    color: var(--text-color);
+}
+
+.show-scroll{
+    bottom: 5rem;
+    visibility: visible;
+}
+
+/* ========== MEDIA QUERIES ============  */
+/* For small devices, menu two columns  */
+@media screen and (max-width: 320px) {
+    .nav_list{
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1rem .5rem;
+    }
+}
+
+/* Classes modified for Large screen size  */
+@media screen and (min-width: 968px) {
+    body{
+        margin: 3rem;
+    }
+
+    .bd-container{
+        margin-left: auto;
+        margin-right: auto;
+    }
+    
+    .l-header,
+    .scrolltop{
+        display: none;
+    }
+
+    .resume{
+        display: grid;
+        grid-template-columns: 1fr 2fr;
+        background-color: var(--container-color);
+        box-shadow: 0 0 20px 12px rgba(13,12,12,.15);
+    }
+
+    .resume_left{
+        background-color: var(--container-color-alt);
+    }
+
+    .resume_left,
+    .resume_right{
+        padding: 0 1.5rem;
+    }
+
+    .section-title,
+    .profile_description{
+        text-align: initial;
+    }
+
+    .home_container{
+        gap: 1.5rem;
+    }
+
+    .home_button-movil{
+        display: none;
+    }
+
+    .references_container{
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .languages_content{
+        grid-template-columns: repeat(6, max-content);
+        column-gap: 3.5rem;
+    }
+
+    .interests_container{
+        grid-template-columns: repeat(4, max-content);
+        column-gap: 3.5rem;
+    }
 }
