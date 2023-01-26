@@ -121,8 +121,10 @@ let resumeButton = document.getElementById("resume-button");
 
 // Function to call areaCv and html 2 pdf options
 function generateResume() {
-  // html2pdf().set(opt).from(areaCv).save();
+  
+  // console.log(html2pdf().set(opt).from(areaCv).save());
   html2pdf(areaCv, opt);
+  // console.log(html2pdf(areaCv));
 }
 
 // when the button is clicked, it executes the three function
