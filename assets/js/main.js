@@ -136,3 +136,5 @@ resumeButton.addEventListener("click", () => {
   // 3. The scaleCv class will remove
   setTimeout(removeScale, 5000);
 });
+
+
