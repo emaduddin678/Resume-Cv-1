@@ -122,7 +122,7 @@ let resumeButton = document.getElementById("resume-button");
 // Function to call areaCv and html 2 pdf options
 function generateResume() {
   // html2pdf().set(opt).from(areaCv).save();
-  html2pdf(areaCv , opt)
+  html2pdf(areaCv, opt);
 }
 
 // when the button is clicked, it executes the three function
@@ -133,6 +133,6 @@ resumeButton.addEventListener("click", () => {
   // 2. The pdf is generated
   generateResume();
 
-  // 3. The scaleCv class will remove 
+  // 3. The scaleCv class will remove
   setTimeout(removeScale, 5000);
 });
